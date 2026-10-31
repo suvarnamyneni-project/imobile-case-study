@@ -24,7 +24,15 @@
 .body h3{margin-bottom:0}
 .card h3,.decision-copy h3{margin-bottom:8px}
 .grid,.process,.decision-shots,.persona-track,.metric-grid,.chips{gap:20px}
+img{height:auto;object-fit:contain}
+.cs-cover{max-width:860px}
+.cs-cover img,.figure.wide img,.figure.phone img,.heuristic-shot img{width:100%;max-width:100%;height:auto;object-fit:contain}
+.figure.wide{width:min(100%,860px);max-width:860px;justify-self:start}
+.figure.board{width:min(100%,720px);max-width:720px}
 .figure.phone{width:min(280px,100%);max-width:280px;justify-self:start}
+.shot-row{display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start}
+.figure a{display:block}
+.figure a:hover{text-decoration:none}
 .table-scroll{overflow-x:auto;scrollbar-width:thin;scrollbar-color:var(--accent) var(--accent-soft)}
 .table-scroll::-webkit-scrollbar{height:10px}
 .table-scroll::-webkit-scrollbar-track{background:var(--accent-soft);border-radius:999px}
@@ -37,6 +45,13 @@
 .decision.pair .decision-shots{flex-direction:row;flex-wrap:wrap}
 .phone-frame{width:280px;max-width:100%;margin:0}
 .phone-frame img{width:100%;height:auto}
+.heuristic-layout{display:grid;grid-template-columns:minmax(0,280px) minmax(0,1fr);gap:20px;align-items:start}
+.heuristic-shot{width:min(100%,280px);max-width:280px;margin:0;justify-self:start;align-self:start}
+.heuristic-copy p,
+.heuristic-copy li{line-height:1.75}
+.heuristic-copy h3{margin-bottom:14px}
+.heuristic-copy ol{margin:16px 0 0;padding-left:20px}
+.heuristic-copy li+li{margin-top:12px}
 
 .persona-wrap{position:relative}
 .persona-wrap::after{content:"";position:absolute;top:0;right:0;bottom:16px;width:40px;background:linear-gradient(to right,transparent,var(--bg));pointer-events:none}
@@ -79,6 +94,7 @@ table.cmp thead th:first-child{z-index:2}
 
 @media (max-width:900px){
   .decision{grid-template-columns:minmax(0,1fr)}
+  .heuristic-layout{grid-template-columns:minmax(0,1fr)}
   .metric-grid{grid-template-columns:1fr 1fr}
   .metric-grid .metric:nth-child(-n+4),
   .metric-grid .metric:nth-child(n+5){grid-column:auto}
@@ -93,7 +109,7 @@ table.cmp thead th:first-child{z-index:2}
 <nav class="cs-nav"><div class="wrap">
   <a class="back" href="https://suvarnamyneni-project.github.io/">← All work</a>
   <div class="links">
-    <a href="#role">My Role</a><a href="#design">Design Process</a><a href="#problem">Problem</a><a href="#stakeholders">Stakeholders</a><a href="#users">End Users</a><a href="#research">Research</a><a href="#competitive">Competitive</a><a href="#personas">Personas</a><a href="#decisions">Decisions</a><a href="#prototype">Prototype</a><a href="#uikit">UI Kit</a><a href="#final">Final Design</a><a href="#outcome">Outcome</a><a href="#metrics">Metrics</a></div>
+    <a href="#role">My Role</a><a href="#design">Design Process</a><a href="#problem">Problem</a><a href="#stakeholders">Stakeholders</a><a href="#users">End Users</a><a href="#research">Research</a><a href="#competitive">Competitive</a><a href="#personas">Personas</a><a href="#decisions">Decisions</a><a href="#prototype">Prototype</a><a href="#final">Final Design</a><a href="#outcome">Outcome</a><a href="#metrics">Metrics</a></div>
 </div></nav>
 
 <header class="cs-hero"><div class="wrap">
@@ -102,7 +118,7 @@ table.cmp thead th:first-child{z-index:2}
   <p class="lede">ICICI Bank set out to revamp iMobile for iOS: a personal banking app with a wide set of tasks, built for people whose financial lives do not look alike. I worked to keep it simple, reachable, and still complete.</p>
   <dl class="meta">
     <div><dt>Role</dt><dd>Research and Core UX Design</dd></div>
-    <div><dt>Timeline</dt><dd>6 months</dd></div>
+    <div><dt>Timeline</dt><dd>11 months</dd></div>
     <div><dt>Team</dt><dd>Ravi, Suvarna, Salma Shaik, Priyanka Kane (PM)</dd></div>
     <div><dt>Platform</dt><dd>iOS</dd></div>
     <div><dt>Tools</dt><dd>Figma</dd></div>
@@ -132,9 +148,9 @@ table.cmp thead th:first-child{z-index:2}
       <div class="step"><b>Prototype</b><span>I annotated wireframes for Login, Dashboard, Accounts, Expenditure Analysis, Fund Transfer, Bill Pay, Offers, and Help, and prototyped them in Figma.</span></div>
       <div class="step"><b>Test &amp; Deliver</b><span>User testing, client feedback, then refine and repeat. I refined wireframes with the internal team and the client before I designed the interface. Sessions used 8 to 10 internal people.</span></div>
     </div>
-    <figure class="figure">
-      <img loading="lazy" src="images/12-process-discover-design-test.webp" width="1319" height="404" alt="Three-column process diagram. Discover and Explore lists Secondary Research, Target audience, User interviews, Personas, Competitor analysis, Heuristic review, and Exploring the problems. Design lists Information Architecture, Wireframing, and Prototyping. Test and Evaluate lists User Testing, Client Feedback, and Refine and repeat. Arrows connect the three headings.">
-      <figcaption>How I structured the work: Discover and Explore, Design, and Test and Evaluate.</figcaption>
+    <figure class="figure wide">
+      <a href="images/12-process-discover-design-test.webp"><img loading="lazy" src="images/12-process-discover-design-test.webp" width="1319" height="404" alt="Three-column process diagram. Discover and Explore lists Secondary Research, Target audience, User interviews, Personas, Competitor analysis, Heuristic review, and Exploring the problems. Design lists Information Architecture, Wireframing, and Prototyping. Test and Evaluate lists User Testing, Client Feedback, and Refine and repeat. Arrows connect the three headings."></a>
+      <figcaption>How I structured the work: Discover and Explore, Design, and Test and Evaluate. <a href="images/12-process-discover-design-test.webp">Full size</a></figcaption>
     </figure>
   </div>
 </div></section>
@@ -159,12 +175,12 @@ table.cmp thead th:first-child{z-index:2}
       <div class="card"><h3>The screen spent itself on the wrong things</h3><p>The profile area took 30 to 35 percent of the screen. “My Favourite Transaction,” which people did not use often, was given a prominence it did not need. A hamburger menu hid the actions.</p></div>
       <div class="card"><h3>Hard to find, hard to name</h3><p>The app already held a lot, including UPI, loans, and card design. Important functions were not easy to find. Transaction narration was vague and inconsistent, so a line in history often did not say what it was.</p></div>
     </div>
-    <div class="grid g2">
-      <figure class="figure phone">
+    <div class="heuristic-layout">
+      <figure class="figure heuristic-shot">
         <img loading="lazy" src="images/29-heuristic-eval-old-dashboard.webp" width="457" height="953" alt="Previous ICICI Bank iMobile dashboard on a phone. A landscape photo header has the logo, a hamburger menu, search, a profile photo, and the greeting Hello, Arti Raut. An orange strip reads My Favorite Transactions. A three-by-three grid lists Accounts and Deposits, Fund Transfer, Recharge, Bill Payments, UPI, Cards Loans and Forex, Shopping and Offers, Investments and Insurance, and Services. No account balance is shown.">
         <figcaption>The previous dashboard. No account balance is shown.</figcaption>
       </figure>
-      <div>
+      <div class="heuristic-copy">
         <h3>Heuristic review</h3>
         <p>I reviewed the old dashboard and found taps that were not needed, navigation that wound around, and forms that ran long. The processes were more complex than the task. I recommended less friction, clearer labels, and simpler workflows.</p>
         <ol>
@@ -196,7 +212,7 @@ table.cmp thead th:first-child{z-index:2}
         </tr>
         <tr>
           <td>Priyanka Kane, PM</td>
-          <td>The six-month revamp aligned with expectations.</td>
+          <td>The 11-month revamp aligned with expectations.</td>
           <td>Priyanka was PM on the team. I aligned the work with expectations through research, user analysis, and iterative design.</td>
         </tr>
         <tr>
@@ -544,9 +560,9 @@ table.cmp thead th:first-child{z-index:2}
       <div class="card"><h3>Relevant content</h3><p>I show content that is relevant to that person. The layout leans on the primary savings relationship. Research noted in the wireframes suggests most people hold a single product, usually a savings account.</p></div>
       <div class="card"><h3>Use the phone</h3><p>I used what the phone already offers. Search accepts voice input. Login can be fingerprint or Face ID.</p></div>
     </div>
-    <figure class="figure">
-      <img loading="lazy" src="images/30-design-objectives-icons.webp" width="1323" height="328" alt="Four orange line icons in a row on a black background: a person running, a magnifying glass, four circles joined by lines, and a simplified face inside a camera-style frame.">
-      <figcaption>Four objectives: quick access, discoverability, relevant content, and using the phone.</figcaption>
+    <figure class="figure wide">
+      <a href="images/30-design-objectives-icons.webp"><img loading="lazy" src="images/30-design-objectives-icons.webp" width="1323" height="328" alt="Four orange line icons in a row on a black background: a person running, a magnifying glass, four circles joined by lines, and a simplified face inside a camera-style frame."></a>
+      <figcaption>Four objectives: quick access, discoverability, relevant content, and using the phone. <a href="images/30-design-objectives-icons.webp">Full size</a></figcaption>
     </figure>
     <p>Some concepts made the journey simpler and, in doing that, worked against the business goals of feature discoverability and cross-selling financial products. A screen that only serves the task hides the rest of the bank. A screen that only promotes products makes the task longer. I made that trade on the wireframes, page by page.</p>
     <div class="grid g2">
@@ -569,9 +585,9 @@ table.cmp thead th:first-child{z-index:2}
   <div class="body">
     <h3>Information architecture</h3>
     <p>I created the information architecture and then refined it: unnecessary states came out, pages moved, and three areas came in — Expenditure Analysis, Upcoming Transactions, and Discover. Frequently used services sit first. Less common features stay quick to find. I streamlined adding and managing products: lines of credit, insurance, debit cards, and investments. I also looked for moments to engage someone without interrupting them, a conversational prompt that does not break the task they came to do.</p>
-    <figure class="figure">
-      <img loading="lazy" src="images/40-information-architecture.png" width="2834" height="774" alt="Wide information-architecture diagram on a black background. The left tree covers continuing to login or entering a PIN, seeing services without logging in, and actions that do not need a login. Middle trees cover Services, including account services, card services, and cheque-book services, plus prompts about doing more with ICICI products. The right side includes a financial-profile prompt and a Dashboard branch with Top Activities, an account snapshot, Discover, and quick actions.">
-      <figcaption>The information architecture. It is a wide map. Open it to read the branches.</figcaption>
+    <figure class="figure wide">
+      <a href="images/40-information-architecture.png"><img loading="lazy" src="images/40-information-architecture.png" width="2834" height="774" alt="Wide information-architecture diagram on a black background. The left tree covers continuing to login or entering a PIN, seeing services without logging in, and actions that do not need a login. Middle trees cover Services, including account services, card services, and cheque-book services, plus prompts about doing more with ICICI products. The right side includes a financial-profile prompt and a Dashboard branch with Top Activities, an account snapshot, Discover, and quick actions."></a>
+      <figcaption>The information architecture. It is a wide map. <a href="images/40-information-architecture.png">Full size</a></figcaption>
     </figure>
     <h3>Wireframes</h3>
     <p>I drew several concepts for the pages that carry the product: Login, Dashboard, Accounts, Expenditure Analysis, Fund Transfer, Bill Pay, Offers, and Help.</p>
@@ -579,9 +595,9 @@ table.cmp thead th:first-child{z-index:2}
     <p>The file is a single, very tall annotated board covering pre-login through offers and card design.</p>
     <h3>Dashboard exploration</h3>
     <p>I tried several home screens. Some savings cards show a Check Balance control and others show the amount already revealed. Variations include quick actions such as IMPS, pay bill, and UPI transfer; a regular-actions list; an updates feed; a Quick Actions and Discover split; and mixes of scan-and-pay, bill pay, and product prompts such as mutual funds and movie tickets.</p>
-    <figure class="figure">
-      <img loading="lazy" src="images/41-dashboard-exploration.webp" width="1311" height="1574" alt="Eight mobile dashboard explorations in a grid. Variations include a savings balance card with quick actions such as IMPS, pay bill, and UPI transfer; a quick-actions list with regular actions like recharge and rent; an updates feed about a loan installment and pending bills; a Quick Actions and Discover split; a yellow account card over offers; an account summary listing savings, loan, and credit card; and mixes of scan-and-pay, bill pay, and product prompts such as mutual funds and movie tickets.">
-      <figcaption>Dashboard directions I explored before the interface was settled.</figcaption>
+    <figure class="figure wide board">
+      <a href="images/41-dashboard-exploration.webp"><img loading="lazy" src="images/41-dashboard-exploration.webp" width="1311" height="1574" alt="Eight mobile dashboard explorations in a grid. Variations include a savings balance card with quick actions such as IMPS, pay bill, and UPI transfer; a quick-actions list with regular actions like recharge and rent; an updates feed about a loan installment and pending bills; a Quick Actions and Discover split; a yellow account card over offers; an account summary listing savings, loan, and credit card; and mixes of scan-and-pay, bill pay, and product prompts such as mutual funds and movie tickets."></a>
+      <figcaption>Dashboard directions I explored before the interface was settled. <a href="images/41-dashboard-exploration.webp">Full size</a></figcaption>
     </figure>
     <h3>Five changes on the path people already take</h3>
     <div class="decision pair">
@@ -659,81 +675,32 @@ table.cmp thead th:first-child{z-index:2}
       </div>
     </div>
     <h3>Test, evaluate, repeat</h3>
-    <div class="grid g2">
-      <div>
-        <p>I tested phase by phase. I refined the wireframes with feedback from the internal team, and with feedback from the client, before I designed the interface.</p>
-        <p>The user sessions were quick and in the moment: 8 to 10 internal people, from various departments.</p>
-      </div>
-      <figure class="figure">
-        <img loading="lazy" src="images/50-user-testing.webp" width="707" height="754" alt="A circular loop on a black background. Three nodes read Design at the top, Client Feedback on the right, and User Testing on the left, joined by a dashed arrow. In the center, a person with glasses holds a phone showing an orange-headed prototype screen at a desk.">
-        <figcaption>Design, client feedback, and user testing, as a loop.</figcaption>
-      </figure>
-    </div>
-  </div>
-</div></section>
-
-<section class="cs-section" id="uikit"><div class="wrap">
-  <div class="head"><div class="num">11</div><div><h2>UI Kit</h2><p>The project’s visual language, shown as a specimen. Swatches below are taken from the screens and from the original section backgrounds.</p></div></div>
-  <div class="body">
-    <h3>Color, as it appears on the screens</h3>
-    <div class="swatches">
-      <div class="swatch"><i style="background:#E67B1E"></i><span>#E67B1E<br>Savings orange</span></div>
-      <div class="swatch"><i style="background:#F17632"></i><span>#F17632<br>Intro band, orange</span></div>
-      <div class="swatch"><i style="background:#AC333A"></i><span>#AC333A<br>Intro band, maroon</span></div>
-      <div class="swatch"><i style="background:#FD8701"></i><span>#FD8701<br>Final field, top</span></div>
-      <div class="swatch"><i style="background:#FC3810"></i><span>#FC3810<br>Final field, bottom</span></div>
-      <div class="swatch"><i style="background:#003060"></i><span>#003060<br>Navy, spending view</span></div>
-      <div class="swatch"><i style="background:#00B858"></i><span>#00B858<br>Under budget</span></div>
-      <div class="swatch"><i style="background:#E80000"></i><span>#E80000<br>Over budget</span></div>
-      <div class="swatch"><i style="background:#FFFFFF"></i><span>#FFFFFF<br>Screen surface</span></div>
-      <div class="swatch"><i style="background:#3C3024"></i><span>#3C3024<br>Ink on the home card</span></div>
-    </div>
-    <div class="grid g2">
-      <figure class="figure">
-        <img loading="lazy" src="images/00-intro-hero-banner-bg.jpg" width="600" height="75" alt="Orange to maroon gradient from the original case-study banner.">
-        <figcaption>The original intro band: orange into maroon. It is a specimen here, not the page background.</figcaption>
-      </figure>
-      <figure class="figure">
-        <img loading="lazy" src="images/60-final-ui-bg.jpg" width="800" height="271" alt="Orange geometric background from the final-UI section of the original case study.">
-        <figcaption>The orange field that sat behind the final screens in the original case study.</figcaption>
-      </figure>
-    </div>
-    <h3>Components</h3>
-    <div class="grid g3">
-      <div class="card"><h3>Savings card</h3><p>Available balance, or a Check Balance control when the amount stays hidden. Statement, Deposits, and Manage sit under it.</p></div>
-      <div class="card"><h3>Top Activities</h3><p>A grid of frequent tasks: Fund Transfer, Bill Pay, Recharge, Accounts and Deposits, Cards, Loans, Invest and Insure, Update Aadhaar, Online PPF. Ordered by what that person does.</p></div>
-      <div class="card"><h3>Discover</h3><p>A second tab, with a badge. Expense feed, upcoming transactions, and tips. On one frame the badge reads 9.</p></div>
-      <div class="card"><h3>Search</h3><p>“What would you like to do today,” with a microphone for voice input. On Services, search uses a placeholder such as “e.g. Link account, Reward points,” and a Most used row of chips.</p></div>
-      <div class="card"><h3>Tab bar</h3><p>Me, BHIM at ICICI, Scan to Pay, Help, and Offer, as on the home screen in a phone frame.</p></div>
-      <div class="card"><h3>Budget status</h3><p>Category bars against a hatched estimated budget. Green marks under budget. Red marks a category that has run past it. Dining and Auto are the ones that cross it on the screen.</p></div>
-      <div class="card"><h3>Transaction row</h3><p>A date, a credit or debit, a tag, and Edit when the tag is wrong. Filters for time range, accounts, and categories. A Recommendations tab sits beside Transactions.</p></div>
-      <div class="card"><h3>Feedback</h3><p>One question, three faces: Very happy, Just OK, and Not happy. Not a scale from 1 to 10. Leftover questions can be answered now or later.</p></div>
-      <div class="card"><h3>Service request</h3><p>A status on each request, such as under process or successfully delivered, and View details. Used for a card delivery, a debit card, and an RD account on the final frames.</p></div>
-    </div>
+    <p>I tested phase by phase. I refined the wireframes with feedback from the internal team, and with feedback from the client, before I designed the interface.</p>
+    <p>The user sessions were quick and in the moment: 8 to 10 internal people, from various departments.</p>
   </div>
 </div></section>
 
 <section class="cs-section dark" id="final"><div class="wrap">
-  <div class="head"><div class="num">12</div><div><h2>Final Design</h2><p>Login through service requests. One login frame lets a returning user swipe to see the balance before signing in.</p></div></div>
+  <div class="head"><div class="num">11</div><div><h2>Final Design</h2><p>Login through service requests. One login frame lets a returning user swipe to see the balance before signing in.</p></div></div>
   <div class="body">
-    <figure class="figure">
+    <figure class="figure wide">
       <img loading="lazy" src="images/61-final-ui-after-1.png" width="1092" height="647" alt="Three final screens labeled Log In, Dashboard, and Transactions. Log In greets Tanaji Ramchandra Ch., offers Swipe to see your balance, and has fields for user ID and password, plus Scan to Pay, Apply, Favourites, Insta Banking, Offers, and Calculators. Dashboard shows the savings balance and Top Activities. Transactions lists dated, tagged rows with Edit.">
       <figcaption>Log in, dashboard, transactions. The login screen includes “Swipe to see your balance,” matching the pre-login note in the wireframes.</figcaption>
     </figure>
-    <figure class="figure">
+    <figure class="figure wide">
       <img loading="lazy" src="images/62-final-ui-after-2.png" width="1049" height="643" alt="Three final screens. FD Account Details shows balance and a line chart rising from 2014 to 2018. Bill Pay lists DTH, Electricity, Gas, and Insurance, with upcoming bills, plus Add biller and Manage biller. Feedback asks How was your overall experience with the app, with Very happy, Just OK, and Not happy.">
       <figcaption>Fixed deposit, bill pay, feedback. The deposit chart is the “see your money growing” idea. Feedback is three faces, not a 1-to-10 scale.</figcaption>
     </figure>
-    <figure class="figure">
+    <figure class="figure wide">
       <img loading="lazy" src="images/63-final-ui-after-3.png" width="1038" height="668" alt="Three final screens. Spending Overview shows the December cash-flow bar and an estimated budget. Track Service Requests shows a credit-card delivery under process, a debit card successfully delivered, and an RD account request under process, each with View details. Upcoming Transactions lists card, loan, SIP, and ECS items with due dates.">
       <figcaption>Spending, service requests, upcoming transactions. Each request has a status and a way into the detail.</figcaption>
     </figure>
-    <div class="grid g2">
-      <figure class="figure">
-        <img loading="lazy" src="images/64-final-ui-hand-mockup.webp" width="753" height="1096" alt="A hand holds a black iPhone. The iMobile home screen shows a savings card with a Check Balance button rather than the amount, then Statement, Deposits, and Manage. Top Activities lists frequent tasks. Discover has a badge of 9. Search reads What would you like to do today, with a microphone.">
-        <figcaption>Home, with the balance hidden behind Check Balance. The search field carries a microphone, the wireframes’ voice input.</figcaption>
+    <div class="shot-row">
+      <figure class="figure phone-frame">
+        <a href="images/64-final-ui-hand-mockup.webp"><img loading="lazy" src="images/64-final-ui-hand-mockup.webp" width="753" height="1096" alt="A hand holds a black iPhone. The iMobile home screen shows a savings card with a Check Balance button rather than the amount, then Statement, Deposits, and Manage. Top Activities lists frequent tasks. Discover has a badge of 9. Search reads What would you like to do today, with a microphone."></a>
+        <figcaption>Home, with the balance hidden behind Check Balance. <a href="images/64-final-ui-hand-mockup.webp">Full size</a></figcaption>
       </figure>
-      <figure class="figure">
+      <figure class="figure phone-frame">
         <img loading="lazy" src="images/01-hero-services-screen-iphone.webp" width="309" height="756" alt="White iPhone showing the iMobile home screen. An orange savings card displays an account and available balance, with Statement, Deposits, and Manage. Below, Top Activities is selected over Discover. The search bar reads What would you like to do today, with a microphone. The tab bar shows Me, BHIM at ICICI, Scan to Pay, Help, and Offer.">
         <figcaption>Home, with the balance shown. Top Activities is selected over Discover.</figcaption>
       </figure>
@@ -742,7 +709,7 @@ table.cmp thead th:first-child{z-index:2}
 </div></section>
 
 <section class="cs-section" id="outcome"><div class="wrap">
-  <div class="head"><div class="num">13</div><div><h2>Outcome</h2><p>I designed a banking app where the primary tasks are seamless and the features people use less often are still easy to find.</p></div></div>
+  <div class="head"><div class="num">12</div><div><h2>Outcome</h2><p>I designed a banking app where the primary tasks are seamless and the features people use less often are still easy to find.</p></div></div>
   <div class="body">
     <p class="callout">The end product was what I envisioned: a beautiful, functional banking app, one of its kind in India. It lets a person perform the primary tasks seamlessly, and it makes the less common features discoverable when they are needed.</p>
     <div class="card"><h3>What the app had to do</h3><p>Primary tasks are seamless: the balance, the statement, a transfer, a bill. Features that are not used every day can still be found, through search, Discover, and a services list that calls out what that person uses most.</p></div>
@@ -754,7 +721,7 @@ table.cmp thead th:first-child{z-index:2}
 </div></section>
 
 <section class="cs-section" id="metrics"><div class="wrap">
-  <div class="head"><div class="num">14</div><div><h2>Metrics</h2><p>Figures for the bank, the Forrester analysis, and the research on this project.</p></div></div>
+  <div class="head"><div class="num">13</div><div><h2>Metrics</h2><p>Figures for the bank, the Forrester analysis, and the research on this project.</p></div></div>
   <div class="body">
     <div class="metric-grid">
       <div class="metric"><div class="v">63</div><div class="l">ICICI’s score out of 100. Highest among the Indian apps in the Forrester analysis I used on this project.</div><div class="n">Measured</div></div>
@@ -763,7 +730,7 @@ table.cmp thead th:first-child{z-index:2}
       <div class="metric"><div class="v">7+</div><div class="l">Countries in ICICI Bank's presence</div><div class="n">Measured</div></div>
       <div class="metric"><div class="v">15</div><div class="l">User interviews: eight ICICI customers and seven customers of other banks.</div><div class="n">Measured</div></div>
       <div class="metric"><div class="v">8–10</div><div class="l">Internal people, from various departments, in the quick user sessions.</div><div class="n">Measured</div></div>
-      <div class="metric"><div class="v">6 mo</div><div class="l">Length of the revamp.</div><div class="n">Measured</div></div>
+      <div class="metric"><div class="v">11 mo</div><div class="l">Length of the revamp.</div><div class="n">Measured</div></div>
     </div>
   </div>
 </div></section>
