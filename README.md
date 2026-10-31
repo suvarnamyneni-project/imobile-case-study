@@ -13,7 +13,7 @@
 
 **Suvarna Myneni**
 
-### [View the case study website →](https://suvarnamyneni-project.github.io/imobile-case-study/)
+### [View the case study website →](https://suvarnamyneni.github.io/imobile-case-study/)
 
 </div>
 
@@ -60,7 +60,7 @@ The task was a user-centered iOS app that holds many banking jobs and still stay
 - [What I learned](#what-i-learned)
 - [What the source does not include](#what-the-source-does-not-include)
 
-The same sections, with the screens, are on the [live site](https://suvarnamyneni-project.github.io/imobile-case-study/).
+The same sections, with the screens, are on the [live site](https://suvarnamyneni.github.io/imobile-case-study/).
 
 ---
 
@@ -214,4 +214,4 @@ That lesson sits inside a first major UX role, in a fast-paced agency environmen
 
 ---
 
-Case study by **Suvarna Myneni**. [Portfolio](https://suvarnamyneni-project.github.io) · [LinkedIn](https://www.linkedin.com/in/suvarnamyneni/)
+Case study by **Suvarna Myneni**. [Portfolio](https://suvarnamyneni.github.io) · [LinkedIn](https://www.linkedin.com/in/suvarnamyneni/)
