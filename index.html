@@ -108,6 +108,16 @@ table.cmp thead th:first-child{z-index:2}
   .metric-grid{grid-template-columns:1fr}
   .phone-frame{width:min(280px,100%)}
 }
+
+.sm-footer{background:#1F2427;color:#E9E4DF;padding:40px 24px;margin-top:64px;font-family:inherit;clear:both;position:relative;z-index:1}
+.sm-footer-inner{max-width:1200px;margin:0 auto;display:grid;gap:8px;text-align:center;justify-items:center}
+.sm-footer-name{margin:0;font-size:18px;font-weight:600;color:#FFFFFF}
+.sm-footer-role{margin:0;font-size:14px;color:#C9C2BB}
+.sm-footer-links{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:center;margin-top:8px}
+.sm-footer-links a{color:#FFFFFF;text-decoration:underline;text-underline-offset:3px;font-size:14px}
+.sm-footer-links a:hover,.sm-footer-links a:focus-visible{color:#F4B9A7}
+.sm-footer-copy{margin:8px 0 0;font-size:12px;color:#9D958E}
+.sm-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 </style>
 </head>
 <body>
@@ -777,6 +787,18 @@ table.cmp thead th:first-child{z-index:2}
   <div><small>Previous</small><a href="https://suvarnamyneni.github.io/amazon-prime-music-case-study/">Amazon Prime Music</a></div>
   <div style="text-align:right"><small>Next project</small><a href="https://suvarnamyneni.github.io/amazon-fresh-case-study/">Amazon Fresh</a></div>
 </div></div>
-<footer class="cs-foot"><div class="wrap">© 2026 Suvarna Myneni · <a href="https://www.linkedin.com/in/suvarnamyneni/">LinkedIn</a></div></footer>
+<footer class="sm-footer" role="contentinfo">
+  <div class="sm-footer-inner">
+    <p class="sm-footer-name">Suvarna Myneni</p>
+    <p class="sm-footer-role">Sr UX Designer · Hyderabad, India · Open to remote or Hyderabad roles</p>
+    <nav class="sm-footer-links" aria-label="Footer">
+      <a href="https://suvarnamyneni.github.io/">Portfolio home</a>
+      <a href="mailto:suvarnamyneni@gmail.com">suvarnamyneni@gmail.com</a>
+      <a href="https://suvarnamyneni.github.io/assets/Suvarna-Myneni-Resume.pdf" download>Resume</a>
+      <a href="https://www.linkedin.com/in/suvarnamyneni/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sm-sr"> (opens in a new tab)</span></a>
+    </nav>
+    <p class="sm-footer-copy">© 2026 Suvarna Myneni</p>
+  </div>
+</footer>
 </body>
 </html>
