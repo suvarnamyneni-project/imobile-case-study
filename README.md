@@ -26,7 +26,7 @@
 | **Employer** | ICICI Bank (in-house, full-time) |
 | **Product** | iMobile dashboard, redesigned for iOS |
 | **Role** | UX Designer at ICICI Bank. Led the research and core UX design. A first major role as a UX designer. |
-| **Team** | Suvarna Myneni (research and core UX), Ravi, Salma Shaik, Priyanka Kane (PM) |
+| **Team** | Suvarna Myneni (research and core UX), Ravi, Priyanka Kane (PM) |
 | **Duration** | 6 months |
 | **Tools** | Figma, X-Mind, InVision |
 | **Methods** | Research, 15 customer interviews, 3 personas, wireframes tested with 8–10 users |
